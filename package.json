@@ -1,0 +1,54 @@
+{
+  "name": "vue-plugin-jumpcard",
+  "version": "1.0.0",
+  "description": "Jump to every url!",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/jumpcard.umd.js",
+  "module": "./dist/jumpcard.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/jumpcard.mjs",
+      "require": "./dist/jumpcard.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hestudio-community/JumpCard.git"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "vuepress-plugin",
+    "url",
+    "card",
+    "jumpcard",
+    "hestudio"
+  ],
+  "author": {
+    "name": "heStudio",
+    "email": "hestudio@hestudio.net",
+    "url": "https://www.hestudio.net/about"
+  },
+  "contributors": [
+    "undefined"
+  ],
+  "displayName": "JumpCard",
+  "publisher": "undefined",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hestudio-community/JumpCard/issues"
+  },
+  "homepage": "https://github.com/hestudio-community/JumpCard#readme",
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "unplugin-auto-import": "^0.17.3",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.0.12"
+  }
+}
