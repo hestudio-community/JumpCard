@@ -65,9 +65,11 @@ export default {
     },
     mounted() {
         this.card.shadow = this.$props.shadow
-        this.text = this.$props.text
-        if (this.$props.header != '') {
-            this.header = this.$props.header
+        if (this.$props.text != '' || this.$props.header) {
+            this.text = this.$props.text
+            if (this.$props.header != '') {
+                this.header = this.$props.header
+            }
         }
         if (this.$props.buttontext != '' && this.$props.link != '') {
             this.buttonshow = true

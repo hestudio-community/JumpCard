@@ -8,7 +8,7 @@
             <p>
                 <el-divider />
             </p>
-            <el-button @click="jump" v-bind="button" :icon="Link" link bg>{{ buttontext }}</el-button>
+            <el-button @click="jump" :icon="Link" link bg>{{ buttontext }}</el-button>
         </div>
     </el-card>
 </template>
@@ -47,27 +47,32 @@ export default {
         return {
             header: '',
             text: '',
+            link: '',
             buttontext: '',
             card: {
                 header: '',
                 shadow: ''
             },
-            button: {
-                href: ''
-            },
             buttonshow: false
         }
     }, 
+    methods: {
+        jump() {
+            window.open(this.link, "_blank")
+        }
+    },
     mounted() {
         this.card.shadow = this.$props.shadow
-        this.text = this.$props.text
-        if (this.$props.header != '') {
-            this.header = this.$props.header
+        if (this.$props.text != '' || this.$props.header) {
+            this.text = this.$props.text
+            if (this.$props.header != '') {
+                this.header = this.$props.header
+            }
         }
         if (this.$props.buttontext != '' && this.$props.link != '') {
             this.buttonshow = true
             this.buttontext = this.$props.buttontext
-            this.button.href = this.$props.link
+            this.link = this.$props.link
         }
     }
 }

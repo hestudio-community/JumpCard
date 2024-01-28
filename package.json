@@ -1,6 +1,6 @@
 {
   "name": "vue-plugin-jumpcard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jump to every url!",
   "type": "module",
   "files": ["dist"],
@@ -20,7 +20,7 @@
     "build": "vite build"
   },
   "keywords": [
-    "vuepress-plugin",
+    "vue-plugin",
     "url",
     "card",
     "jumpcard",
