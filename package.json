@@ -1,15 +1,15 @@
 {
   "name": "vue-plugin-jumpcard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Jump to every url!",
   "type": "module",
   "files": ["dist"],
-  "main": "./dist/jumpcard.umd.js",
-  "module": "./dist/jumpcard.mjs",
+  "main": "./dist/JumpCard.js",
+  "module": "./dist/jumpcard.umd.cjs",
   "exports": {
     ".": {
-      "import": "./dist/jumpcard.mjs",
-      "require": "./dist/jumpcard.umd.js"
+      "import": "./dist/jumpcard.umd.cjs",
+      "require": "./dist/jumpcard.js"
     }
   },
   "repository": {
