@@ -1,23 +1,23 @@
 <template>
-  <el-card :header="header" :shadow="shadow">
+  <el-card :shadow="shadow">
     <div>
-      <el-text size="large" tag="b">{{ header }}</el-text>
+      <el-text style="font-size: 24px" tag="h1">{{ header }}</el-text>
     </div>
     <p>{{ text }}</p>
-    <div v-if="showButton">
-      <p>
-        <el-divider />
-      </p>
+    <div v-show="showButton">
+      <el-divider />
       <el-button @click="jump" :icon="Link" link bg>{{ buttontext }}</el-button>
     </div>
   </el-card>
 </template>
 
-<script>
+<script setup>
 import "element-plus/dist/index.css";
 import "element-plus/theme-chalk/dark/css-vars.css";
 import { Link } from "@element-plus/icons-vue";
+</script>
 
+<script>
 export default {
   props: {
     text: {
@@ -34,21 +34,26 @@ export default {
     },
     buttontext: {
       type: String,
-      default: "Jump to it!",
+      default: "",
     },
     shadow: {
       type: String,
       default: "hover",
     },
   },
-  computed: {
-    showButton() {
-      return this.buttontext !== "" && this.link !== "";
-    },
+  data() {
+    return {
+      showButton: false,
+    };
+  },
+  created() {
+    if (this.buttontext !== "" && this.link !== "") {
+      this.showButton = true;
+    }
   },
   methods: {
     jump() {
-      this.$router.push({ path: this.link });
+      this.$router.push("/");
     },
   },
 };

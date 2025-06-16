@@ -11,38 +11,39 @@ npm install vue-plugin-jumpcard
 ### How to import it?
 
 ```javascript
-import { createApp } from 'vue'
-import JumpCard from 'vue-plugin-jumpcard'
+import { createApp } from "vue";
+import Jumpcard from "vue-plugin-jumpcard";
+import App from "./App.vue";
 
-const app = createApp({})
-
-app.use(Jumpcard)
+const app = createApp(App);
+app.use(Jumpcard);
+app.mount("#app");
 ```
 
 ### How to use it on your project?
 
 ```vue
 <template>
-    <InternalJumpCard 
-        header="Title"
-        text="main info"
-        buttontext="text on button"
-        link="/path/index.html"
-        shadow="hover"
-    />
-    <ExternalJumpCard 
-        header="Title"
-        text="main info"
-        buttontext="text on button"
-        link="https://www.example.com/path/index.html"
-        shadow="hover"
-    />
+  <InternalJumpCard
+    header="Title"
+    text="main info"
+    buttontext="text on button"
+    link="/path/index.html"
+    shadow="hover"
+  />
+  <ExternalJumpCard
+    header="Title"
+    text="main info"
+    buttontext="text on button"
+    link="https://www.example.com/path/index.html"
+    shadow="hover"
+  />
 </template>
 ```
 
-| opinion | note |
-|---|---|
-| header |  If you don't fill it out, it won't show up. |
-| text | If you don't fill it in, it will show up blank. |
-| buttontext && link | They must both be present or the button will not be displayed. |
-| shadow | The default value is `hover` and you can set it to `always` or `never`.Which determines when the card's shadow is displayed. |
+| opinion            | note                                                                                                                         |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| header             | If you don't fill it out, it won't show up.                                                                                  |
+| text               | If you don't fill it in, it will show up blank.                                                                              |
+| buttontext && link | They must both be present or the button will not be displayed.                                                               |
+| shadow             | The default value is `hover` and you can set it to `always` or `never`.Which determines when the card's shadow is displayed. |
