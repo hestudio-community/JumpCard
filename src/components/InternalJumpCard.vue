@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     jump() {
-      this.$router.push("/");
+      this.$router.push(this.link);
     },
   },
 };
