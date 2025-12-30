@@ -47,3 +47,9 @@ app.mount("#app");
 | text               | If you don't fill it in, it will show up blank.                                                                              |
 | buttontext && link | They must both be present or the button will not be displayed.                                                               |
 | shadow             | The default value is `hover` and you can set it to `always` or `never`.Which determines when the card's shadow is displayed. |
+| avatar             | Display the avatar to the right of the title. When the `header` does not exist, display the avatar in the title position.    |
+
+| slot    | note                                       |
+| ------- | ------------------------------------------ |
+| default | `#default` slot => `text` option           |
+| icon    | Custom icon displayed before `buttontext`. |

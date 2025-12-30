@@ -6,8 +6,8 @@
     <InternalJumpCard
       header="InternalJumpCard"
       text="main info"
-      buttontext="text on button"
-      link="/subpage"
+      buttontext="go to slots test"
+      link="/slotstest"
       shadow="hover"
     />
   </div>
@@ -19,6 +19,29 @@
       text="main info"
       buttontext="text on button"
       link="https://www.example.com/path/index.html"
+      shadow="hover"
+    />
+  </div>
+  <br />
+  <div>
+    <h2>JumpCard with avatar</h2>
+    <InternalJumpCard
+      header="JumpCard with Avatar"
+      text="main info"
+      avatar="https://img.hestudio.net/img/2022/12/13/639872e717350.png"
+      buttontext="go to slots test"
+      link="/slotstest"
+      shadow="hover"
+    />
+  </div>
+  <br />
+  <div>
+    <h2>JumpCard with avatar without header</h2>
+    <InternalJumpCard
+      text="main info"
+      avatar="https://img.hestudio.net/img/2022/12/13/639872e717350.png"
+      buttontext="go to slots test"
+      link="/slotstest"
       shadow="hover"
     />
   </div>

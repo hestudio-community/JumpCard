@@ -1,12 +1,34 @@
 <template>
   <el-card :shadow="shadow">
-    <div>
-      <el-text style="font-size: 24px" tag="h1">{{ header }}</el-text>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <el-text v-if="header" style="font-size: 24px" tag="h1">{{
+        header
+      }}</el-text>
+      <el-avatar
+        v-if="avatar"
+        :size="48"
+        style="border-radius: 15px"
+        :src="avatar"
+      />
     </div>
-    <p>{{ text }}</p>
+    <br />
+    <slot>
+      {{ text }}
+    </slot>
     <div v-show="showButton">
       <el-divider />
-      <el-button @click="jump" :icon="Link" link bg>{{ buttontext }}</el-button>
+      <el-button @click="jump" link bg>
+        <template #default>
+          {{ buttontext }}
+        </template>
+        <template #icon>
+          <slot name="icon">
+            <el-icon><Link /></el-icon>
+          </slot>
+        </template>
+      </el-button>
     </div>
   </el-card>
 </template>
@@ -39,6 +61,10 @@ export default {
     shadow: {
       type: String,
       default: "hover",
+    },
+    avatar: {
+      type: String,
+      default: "",
     },
   },
   data() {

@@ -4,11 +4,11 @@ import JumpCard from "vue-plugin-jumpcard";
 import "vue-plugin-jumpcard/dist/jumpcard.css";
 import App from "./App.vue";
 import MainPage from "./MainPage.vue";
-import SubPage from "./SubPage.vue";
+import SlotsTest from "./SlotsTest.vue";
 
 const routes = [
   { path: "/", component: MainPage },
-  { path: "/subpage", component: SubPage },
+  { path: "/slotstest", component: SlotsTest },
 ];
 
 const router = createRouter({
