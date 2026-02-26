@@ -24,25 +24,31 @@
   </div>
   <br />
   <div>
-    <h2>JumpCard with avatar</h2>
+    <h2>SlotsTest Page</h2>
     <InternalJumpCard
-      header="JumpCard with Avatar"
-      text="main info"
-      avatar="https://img.hestudio.net/img/2022/12/13/639872e717350.png"
-      buttontext="go to slots test"
+      header="SlotsTest Page"
+      buttontext="goto"
       link="/slotstest"
       shadow="hover"
-    />
+      ><b>Slot Test</b>
+      <template #icon>
+        <el-icon><StarFilled /></el-icon> </template
+    ></InternalJumpCard>
   </div>
   <br />
   <div>
-    <h2>JumpCard with avatar without header</h2>
+    <h2>AvatarTest Page</h2>
     <InternalJumpCard
-      text="main info"
+      header="AvatarTest Page"
+      buttontext="goto"
       avatar="https://img.hestudio.net/img/2022/12/13/639872e717350.png"
-      buttontext="go to slots test"
-      link="/slotstest"
+      link="/avatarstest"
       shadow="hover"
     />
   </div>
+  
 </template>
+
+<script setup>
+import { StarFilled } from "@element-plus/icons-vue";
+</script>
