@@ -73,6 +73,9 @@ export default {
     };
   },
   created() {
+    console.warn(
+      "ExternalJumpCard and InternalJumpCard will be deprecated in the future; please replace them with JumpCard. See https://www.npmjs.com/package/vue-plugin-jumpcard for details.",
+    );
     if (this.buttontext !== "" && this.link !== "") {
       this.showButton = true;
     }

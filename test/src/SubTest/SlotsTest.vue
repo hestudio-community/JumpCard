@@ -3,28 +3,24 @@
   <br />
   <div>
     <h2>Default Slot Test</h2>
-    <InternalJumpCard
-      header="InternalJumpCard"
-      buttontext="back to root"
+    <jumpcard
+      header="Default Slot Test"
       link="/"
-      shadow="hover"
-      ><b>Slot Test</b></InternalJumpCard
+      ><b>Slot Test</b></jumpcard
     >
   </div>
   <br />
   <div>
     <h2>Icon Slot Test</h2>
-    <InternalJumpCard
-      header="InternalJumpCard"
-      buttontext="back to root"
-      text="test"
+    <jumpcard
+      header="Icon Slot Test"
+      content="test"
       link="/"
-      shadow="hover"
     >
       <template #icon>
         <el-icon><StarFilled /></el-icon>
       </template>
-    </InternalJumpCard>
+    </jumpcard>
   </div>
 </template>
 
